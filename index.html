@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/styles/styles.css">
+    <script src="./public/scripts/generator.js" defer></script>
+    <script src="./public/scripts/theme.js" defer></script>
+    <title>Gerador de Senhas</title>
+</head>
+<body>
+    <div class="container">
+        <form action="" id="form">
+            <div class="switch">
+                <input type="checkbox" id="id-checkbox">
+                <span class="slider"></span>
+            </div>
+            <input type="text" name="password" class="form__input" id="id-password" placeholder="Senha...">
+            <input type="number" name="numberChars" class="form__input" id="id-number-chars" min="12" max="38" placeholder="Quantidade de caracteres...">
+            <button id="btn-generate">
+                Gerar
+            </button>
+        </form>
+    </div>
+</body>
+</html>

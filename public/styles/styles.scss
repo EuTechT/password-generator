@@ -1,0 +1,128 @@
+:root {
+    font-size: 16px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+@mixin flexbox($flex-direction: row, $justify-content: center, $align-items: center) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+%border {
+    outline: 0;
+    border: {
+        width: 0;
+        radius: 10px;
+    }
+}
+
+%transition {
+    transition: all 0.25s linear;
+}
+
+body {
+    height: 100vh;
+    @include flexbox();
+    background-color: rgb(61, 58, 58);
+    @extend %transition;
+}
+
+.container {
+    width: 40vw;
+    min-width: 200px;
+    height: 400px;
+    background-color: rgb(32, 31, 31);
+    border-radius: 10px;
+    position: relative;
+    @extend %transition;
+}
+
+form {
+    height: 100%;
+    width: 100%;
+    @include flexbox($flex-direction: column);
+
+    .form__input {
+        width: 84%;
+        height: 50px;
+        font-size: 1.2rem;
+        padding: 1.6rem 1.2rem;
+        margin-bottom: 1.4rem;
+        @extend %border;
+    }
+
+    button {
+        width: 64%;
+        height: 40px;
+        cursor: pointer;
+        @extend %border;
+        background-color: rgb(240, 71, 10);
+        text-transform: uppercase;
+        color: #fff;
+        font: {
+            size: 1rem;
+            weight: bold;
+        }
+
+
+        &:hover {
+            background-color: rgb(224, 75, 21); 
+        }
+    }
+}
+
+.switch {
+    width: 50px;
+    height: 26px;
+    border-radius: 10px;
+    background: rgb(61, 58, 58);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    cursor: pointer;
+    @extend %transition;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+}
+
+.slider {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 50%;
+    background-color:  rgb(32, 31, 31);
+    position: absolute;
+    left: 0.2rem;
+    top: 0.19rem;
+    @extend %transition;
+}
+
+.slider.sliderFinal {
+    left: 1.6rem;
+    background-color: rgb(97, 94, 94);
+}
+
+.switch.switchTheme {
+    background-color: rgb(235, 226, 226);
+}
+
+.container.containerTheme {
+    background-color: rgb(97, 94, 94);
+}
+
+body.bodyTheme {
+    background-color: rgb(235, 226, 226);
+}

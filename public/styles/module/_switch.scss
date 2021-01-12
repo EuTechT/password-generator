@@ -1,0 +1,30 @@
+.switch {
+    width: 50px;
+    height: 26px;
+    border-radius: 10px;
+    background: $background-color-dark-theme-1;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    cursor: pointer;
+    @extend %transition;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+}
+
+.slider {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 50%;
+    background-color:  $background-color-dark-theme-2;
+    position: absolute;
+    left: 0.2rem;
+    top: 0.19rem;
+    @extend %transition;
+}

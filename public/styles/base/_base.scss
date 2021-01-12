@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html, 
+body {
+    font-size: $main-font-size;
+}
+
+body {
+    height: 100vh;
+    @include flexbox();
+    background-color: $background-color-dark-theme-1;
+    @extend %transition;
+}

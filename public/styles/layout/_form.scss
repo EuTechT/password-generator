@@ -1,0 +1,32 @@
+.form {
+    height: 100%;
+    width: 100%;
+    @include flexbox($flex-direction: column);
+
+    &__input {
+        width: 84%;
+        height: 50px;
+        font-size: 1.2rem;
+        padding: 1.6rem 1.2rem;
+        margin-bottom: 1.4rem;
+        @extend %border;
+    }
+
+    &__input::placeholder {
+        color: rgba(0, 0, 0, 0.8);
+    }
+
+    &__button {
+        width: 64%;
+        height: 40px;
+        cursor: pointer;
+        @extend %border;
+        background-color: $button-color;
+        text-transform: uppercase;
+        color: #fff;
+        font: {
+            size: 1rem;
+            weight: bold;
+        }
+    }
+}

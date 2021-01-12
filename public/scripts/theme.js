@@ -17,14 +17,14 @@ switchButton.addEventListener('click', () => {
     inputSwitch.checked = checkInput(inputSwitch.checked);
 
     if(inputSwitch.checked == true) {
-        slider.classList.add('sliderFinal');
-        switchButton.classList.add('switchTheme');
-        container.classList.add('containerTheme');
-        tagBody.classList.add('bodyTheme');
+        slider.classList.add('slider-light-theme');
+        switchButton.classList.add('switch-light-theme');
+        container.classList.add('container-light-theme');
+        tagBody.classList.add('body-light-theme');
     } else {
-        slider.classList.remove('sliderFinal');
-        switchButton.classList.remove('switchTheme');
-        container.classList.remove('containerTheme');
-        tagBody.classList.remove('bodyTheme');
+        slider.classList.remove('slider-light-theme');
+        switchButton.classList.remove('switch-light-theme');
+        container.classList.remove('container-light-theme');
+        tagBody.classList.remove('body-light-theme');
     }
 });
